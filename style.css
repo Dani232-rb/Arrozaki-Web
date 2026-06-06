@@ -367,3 +367,193 @@ textarea.form-input { resize: vertical; min-height: 7rem; }
   .menu-grid { grid-template-columns: 1fr; }
   .promos-grid { grid-template-columns: 1fr; }
 }
+/* ==========================================
+   RESPONSIVE / MEDIA QUERIES
+   ========================================== */
+
+@media (max-width: 768px) {
+  
+  /* --- NAV RESPONSIVE --- */
+  nav {
+    padding: 1rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    position: relative;
+  }
+  
+  nav .logo {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+  }
+  
+  nav ul a {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+  }
+  
+  /* --- HERO RESPONSIVE --- */
+  .hero {
+    padding: 6rem 1.5rem 4rem;
+    min-height: auto;
+  }
+  
+  .hero h1 {
+    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    max-width: 100%;
+  }
+  
+  .hero-sub {
+    max-width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .hero-cta {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+  
+  .hero-cta .btn-primary,
+  .hero-cta .btn-ghost {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .hero-number {
+    display: none;
+  }
+  
+  /* --- STATS RESPONSIVE --- */
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  
+  .stat {
+    border-right: none;
+    border-bottom: 0.5px solid var(--border);
+    padding: 2rem;
+  }
+  
+  .stat:last-child {
+    border-bottom: none;
+  }
+  
+  .stat-num {
+    font-size: 2.5rem;
+  }
+  
+  /* --- HISTORIA RESPONSIVE --- */
+  .historia {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  
+  .historia-img {
+    aspect-ratio: 4/3;
+    order: -1;
+  }
+  
+  /* --- MENÚ RESPONSIVE --- */
+  .menu-section {
+    padding: 6rem 1.5rem;
+  }
+  
+  .menu-inner {
+    padding: 0;
+  }
+  
+  .menu-header h2 {
+    font-size: clamp(2rem, 6vw, 2.8rem);
+    margin-bottom: 2rem;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  /* --- PROMOS RESPONSIVE --- */
+  .promos-section {
+    padding: 6rem 1.5rem;
+  }
+  
+  .promo-hero {
+    padding: 0 1rem;
+  }
+  
+  .promo-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  
+  .promo-desc {
+    font-size: 1rem;
+  }
+  
+  /* --- CONTACTO RESPONSIVE --- */
+  .contacto-section {
+    padding: 6rem 1.5rem;
+  }
+  
+  .contacto-inner {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  
+  /* --- FOOTER RESPONSIVE --- */
+  footer {
+    padding: 2rem 1.5rem;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+  
+  /* --- SECTIONS GENERALES --- */
+  section {
+    padding: 4rem 1.5rem;
+  }
+  
+  .section-tag {
+    font-size: 0.65rem;
+  }
+  
+}
+
+/* --- BREAKS PEQUEÑOS --- */
+@media (max-width: 480px) {
+  
+  nav ul {
+    gap: 0.5rem;
+  }
+  
+  nav ul a {
+    font-size: 0.6rem;
+    letter-spacing: 0.08em;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .arrozaki-card {
+    margin-bottom: 1rem;
+  }
+  
+  .arrozaki-name {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .arrozaki-badges {
+    flex-direction: column;
+  }
+  
+}

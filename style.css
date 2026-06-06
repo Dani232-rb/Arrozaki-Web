@@ -4,14 +4,14 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #0e0e0e;
-  --bg2: #161616;
-  --bg3: #1e1e1e;
-  --accent: #c8a96e;
-  --accent2: #e8c98a;
-  --text: #f0ece4;
-  --muted: #888880;
-  --border: rgba(200,169,110,0.18);
+  --bg: #0a0a0a;
+  --bg2: #141414;
+  --bg3: #1c1c1c;
+  --accent: #D32F2F;
+  --accent2: #FF5252;
+  --text: #ffffff;
+  --muted: #b0b0b0;
+  --border: rgba(255, 255, 255, 0.12);
 }
 
 body {
@@ -20,7 +20,8 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
-  font-size: 17px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -34,32 +35,31 @@ nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 100;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.4rem 4rem;
-  background: rgba(14,14,14,0.92);
+  background: rgba(10,10,10,0.95);
   backdrop-filter: blur(16px);
   border-bottom: 0.5px solid var(--border);
 }
 
 .logo {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 300;
   letter-spacing: 0.08em;
-  color: var(--accent);
+  color: var(--text);
   white-space: nowrap;
 }
-.logo span { color: var(--text); font-style: italic; }
+.logo span { color: var(--accent); font-style: italic; }
 
-nav ul { display: flex; gap: 2.5rem; }
+nav ul { display: flex; gap: 2.8rem; }
 nav ul a {
-  font-size: 0.82rem;
-  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--muted);
   transition: color 0.3s;
 }
 nav ul a:hover, nav ul a.active { color: var(--accent); }
 
-/* Hamburger */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -72,7 +72,7 @@ nav ul a:hover, nav ul a.active { color: var(--accent); }
 .nav-toggle span {
   display: block;
   width: 24px;
-  height: 1px;
+  height: 1.5px;
   background: var(--text);
   transition: all 0.3s;
 }
@@ -84,8 +84,8 @@ nav ul a:hover, nav ul a.active { color: var(--accent); }
    COMMON COMPONENTS
    =========================== */
 .section-tag {
-  font-size: 0.76rem;
-  letter-spacing: 0.22em;
+  font-size: 0.82rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1.5rem;
@@ -96,7 +96,7 @@ nav ul a:hover, nav ul a.active { color: var(--accent); }
 .section-tag::before {
   content: '';
   display: block;
-  width: 1.5rem;
+  width: 2rem;
   height: 0.5px;
   background: var(--accent);
   flex-shrink: 0;
@@ -104,26 +104,27 @@ nav ul a:hover, nav ul a.active { color: var(--accent); }
 
 .btn-primary, .btn-ghost {
   display: inline-block;
-  padding: 0.85rem 2.2rem;
+  padding: 0.9rem 2.4rem;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.14em;
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   cursor: pointer;
   transition: all 0.3s;
 }
 .btn-primary {
   background: var(--accent);
-  color: #0e0e0e;
+  color: #ffffff;
   border: none;
+  font-weight: 500;
 }
-.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); }
+.btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 5px 15px rgba(211, 47, 47, 0.3); }
 .btn-ghost {
   background: transparent;
-  color: var(--muted);
-  border: 0.5px solid rgba(136,136,128,0.35);
+  color: var(--text);
+  border: 0.5px solid var(--border);
 }
-.btn-ghost:hover { color: var(--text); border-color: var(--text); }
+.btn-ghost:hover { border-color: var(--accent); color: var(--accent); }
 
 footer {
   padding: 3rem 4rem;
@@ -131,7 +132,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   border-top: 0.5px solid var(--border);
-  font-size: 0.72rem;
+  font-size: 0.8rem;
   color: var(--muted);
 }
 
@@ -154,7 +155,7 @@ footer {
   position: absolute;
   top: 0; right: 0;
   width: 50%; height: 100%;
-  background: radial-gradient(ellipse at 60% 40%, rgba(200,169,110,0.06) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 65% 40%, rgba(211, 47, 47, 0.08) 0%, transparent 65%);
   pointer-events: none;
 }
 
@@ -165,8 +166,8 @@ footer {
 }
 
 .hero-tag {
-  font-size: 0.76rem;
-  letter-spacing: 0.22em;
+  font-size: 0.82rem;
+  letter-spacing: 0.24em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 2rem;
@@ -177,26 +178,26 @@ footer {
 .hero-tag::before {
   content: '';
   display: block;
-  width: 2.5rem;
+  width: 3rem;
   height: 0.5px;
   background: var(--accent);
 }
 
 .hero h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 6rem);
+  font-size: clamp(3.2rem, 6.5vw, 6.5rem);
   font-weight: 300;
   line-height: 1.05;
   letter-spacing: -0.01em;
   margin-bottom: 1.8rem;
 }
-.hero h1 em { font-style: italic; color: var(--accent); }
+.hero h1 em { font-style: italic; color: var(--text); }
 
 .hero-sub {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--muted);
   max-width: 36ch;
-  line-height: 1.85;
+  line-height: 1.8;
   margin-bottom: 3rem;
 }
 
@@ -230,27 +231,27 @@ footer {
   border-bottom: 0.5px solid var(--border);
 }
 .stat {
-  padding: 2.5rem;
+  padding: 3rem;
   border-right: 0.5px solid var(--border);
   text-align: center;
 }
 .stat:last-child { border-right: none; }
 .stat-num {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3rem;
+  font-size: 3.5rem;
   font-weight: 300;
   color: var(--accent);
   margin-bottom: 0.5rem;
 }
 .stat-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--muted);
 }
 
 /* ===========================
-   INDEX — HISTORIA PREVIEW
+   HISTORIA PREVIEW
    =========================== */
 .historia-section { padding: 8rem 4rem; }
 
@@ -262,14 +263,14 @@ footer {
 }
 .historia h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 1.8rem;
 }
 .historia h2 em { font-style: italic; color: var(--accent); }
 .historia p {
-  font-size: 1rem;
+  font-size: 1.05rem;
   color: var(--muted);
   line-height: 1.9;
   margin-bottom: 1.2rem;
@@ -313,7 +314,7 @@ footer {
 .menu-header { margin-bottom: 4rem; }
 .menu-header h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
   font-weight: 300;
   line-height: 1.1;
 }
@@ -321,7 +322,7 @@ footer {
 
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
 }
 
@@ -333,7 +334,7 @@ footer {
 }
 .arrozaki-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(200,169,110,0.5);
+  border-color: var(--accent);
 }
 
 .arrozaki-img {
@@ -347,15 +348,13 @@ footer {
   object-fit: cover;
   transition: transform 0.5s;
 }
-.arrozaki-card:hover .arrozaki-img img {
-  transform: scale(1.04);
-}
+.arrozaki-card:hover .arrozaki-img img { transform: scale(1.04); }
 
-.arrozaki-content { padding: 1.5rem; }
+.arrozaki-content { padding: 1.6rem; }
 
 .arrozaki-name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 300;
   margin-bottom: 0.6rem;
   display: flex;
@@ -363,13 +362,13 @@ footer {
   align-items: center;
 }
 .arrozaki-price {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--accent);
   font-weight: 500;
   font-family: 'Outfit', sans-serif;
 }
 .arrozaki-desc {
-  font-size: 0.94rem;
+  font-size: 0.98rem;
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -379,12 +378,12 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.04em;
+  font-size: 0.74rem;
+  letter-spacing: 0.05em;
   color: var(--text);
-  background: rgba(200,169,110,0.08);
-  border: 0.5px solid var(--border);
-  padding: 0.35rem 0.65rem;
+  background: rgba(211, 47, 47, 0.1);
+  border: 0.5px solid rgba(211, 47, 47, 0.3);
+  padding: 0.4rem 0.7rem;
   line-height: 1.4;
 }
 
@@ -422,29 +421,30 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  background: var(--bg3);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-style: italic;
   color: var(--muted);
 }
 
 .promo-label {
-  font-size: 0.72rem;
-  letter-spacing: 0.2em;
+  font-size: 0.78rem;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
   margin-bottom: 1rem;
 }
 .promo-title {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(3rem, 6vw, 5rem);
+  font-size: clamp(3.2rem, 6.2vw, 5.2rem);
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 1.5rem;
 }
 .promo-title em { font-style: italic; color: var(--accent); }
 .promo-desc {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--muted);
   line-height: 1.85;
   max-width: 480px;
@@ -453,12 +453,12 @@ footer {
 .promo-badge {
   display: inline-block;
   background: var(--accent);
-  color: #0e0e0e;
-  font-size: 0.68rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  padding: 0.6rem 1.8rem;
+  padding: 0.7rem 2rem;
   margin-top: 2rem;
 }
 
@@ -482,7 +482,7 @@ footer {
 
 .contacto-inner h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.4rem, 4.2vw, 3.4rem);
   font-weight: 300;
   line-height: 1.15;
   margin-bottom: 1.5rem;
@@ -493,24 +493,24 @@ footer {
 .info-row {
   display: flex;
   gap: 1.5rem;
-  padding: 1.2rem 0;
+  padding: 1.3rem 0;
   border-bottom: 0.5px solid var(--border);
 }
 .info-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--accent);
   min-width: 5.5rem;
   padding-top: 0.1rem;
 }
-.info-value { font-size: 0.96rem; color: var(--text); line-height: 1.6; }
+.info-value { font-size: 1rem; color: var(--text); line-height: 1.6; }
 
-.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.contact-form { display: flex; flex-direction: column; gap: 1.3rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
 .form-label {
-  font-size: 0.68rem;
-  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--muted);
 }
@@ -518,9 +518,9 @@ footer {
   background: var(--bg);
   border: 0.5px solid var(--border);
   color: var(--text);
-  padding: 0.8rem 1rem;
+  padding: 0.85rem 1.1rem;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.88rem;
+  font-size: 0.92rem;
   font-weight: 300;
   outline: none;
   transition: border-color 0.3s;
@@ -528,9 +528,8 @@ footer {
 }
 .form-input:focus { border-color: var(--accent); }
 .form-input::placeholder { color: var(--muted); opacity: 0.5; }
-textarea.form-input { resize: vertical; min-height: 8rem; }
+textarea.form-input { resize: vertical; min-height: 8.5rem; }
 
-/* SOCIAL BUTTONS */
 .social-btns {
   display: flex;
   gap: 1rem;
@@ -541,10 +540,10 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.8rem 1.6rem;
   font-family: 'Outfit', sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   font-weight: 400;
   border: 0.5px solid var(--border);
@@ -552,22 +551,22 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
   cursor: pointer;
 }
 .btn-instagram {
-  color: #c8a96e;
-  border-color: rgba(200,169,110,0.3);
+  color: var(--accent);
+  border-color: rgba(211, 47, 47, 0.4);
 }
 .btn-instagram:hover {
-  background: rgba(200,169,110,0.08);
+  background: rgba(211, 47, 47, 0.1);
   border-color: var(--accent);
   color: var(--accent2);
   transform: translateY(-2px);
 }
 .btn-facebook {
-  color: var(--muted);
-  border-color: rgba(136,136,128,0.3);
+  color: var(--text);
+  border-color: rgba(255, 255, 255, 0.25);
 }
 .btn-facebook:hover {
-  background: rgba(136,136,128,0.08);
-  border-color: var(--muted);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text);
   color: var(--text);
   transform: translateY(-2px);
 }
@@ -582,24 +581,24 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
 .historia-content { max-width: 780px; margin: 0 auto; }
 .historia-content h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.8rem, 5.2vw, 4.2rem);
   font-weight: 300;
   line-height: 1.1;
   margin-bottom: 2rem;
 }
 .historia-content h1 em { font-style: italic; color: var(--accent); }
 .historia-text {
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   color: var(--muted);
   line-height: 2;
   margin-bottom: 1.8rem;
 }
 .quote-block {
-  border-left: 2px solid var(--accent);
-  padding-left: 2rem;
+  border-left: 3px solid var(--accent);
+  padding-left: 2.2rem;
   margin: 3rem 0;
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-style: italic;
   color: var(--text);
   line-height: 1.6;
@@ -636,7 +635,6 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
    RESPONSIVE — MOBILE (≤768px)
    =========================== */
 @media (max-width: 768px) {
-  /* NAV */
   nav {
     padding: 1rem 1.5rem;
     flex-wrap: wrap;
@@ -654,20 +652,18 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
   nav ul.open { display: flex; }
   nav ul li a {
     display: block;
-    padding: 0.75rem 0;
-    font-size: 0.8rem;
-    border-bottom: 0.5px solid rgba(200,169,110,0.08);
+    padding: 0.8rem 0;
+    font-size: 0.85rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.08);
   }
   nav ul li:last-child a { border-bottom: none; }
 
-  /* SECTIONS */
   .menu-section,
   .promos-section,
   .contacto-section { padding: 5rem 1.5rem; }
   .historia-full { padding: 7rem 1.5rem 4rem; }
   .historia-section { padding: 4rem 1.5rem; }
 
-  /* STATS */
   .stats { grid-template-columns: 1fr; }
   .stat {
     border-right: none;
@@ -676,13 +672,10 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
   }
   .stat:last-child { border-bottom: none; }
 
-  /* MENU */
   .menu-grid { grid-template-columns: 1fr; }
 
-  /* PROMOS */
-  .promo-title { font-size: clamp(2.2rem, 8vw, 3rem); }
+  .promo-title { font-size: clamp(2.4rem, 8vw, 3.2rem); }
 
-  /* FOOTER */
   footer {
     padding: 2rem 1.5rem;
     flex-direction: column;
@@ -690,7 +683,6 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
     text-align: center;
   }
 
-  /* ARROZAKI CARD SMALL */
   .arrozaki-name {
     flex-direction: column;
     align-items: flex-start;
@@ -702,7 +694,7 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
    RESPONSIVE — SMALL (≤480px)
    =========================== */
 @media (max-width: 480px) {
-  .logo { font-size: 1.1rem; }
+  .logo { font-size: 1.2rem; }
   .hero { padding: 7rem 1rem 3rem; }
   .menu-section,
   .promos-section,

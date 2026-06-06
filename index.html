@@ -12,6 +12,9 @@
 
 <nav>
   <div class="logo">Arrozaki <span>— Healthy Bites</span></div>
+  <button class="nav-toggle" aria-label="Menú" onclick="this.classList.toggle('open'); document.querySelector('nav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
   <ul>
     <li><a href="index.html" class="active">Inicio</a></li>
     <li><a href="historia.html">Historia</a></li>
@@ -22,7 +25,6 @@
 </nav>
 
 <section class="hero">
-  <!-- Texto a la izquierda -->
   <div class="hero-content">
     <p class="hero-tag">Comida saludable · Tizayuca</p>
     <h1>Un sabor <em>único</em> como tu primer amor</h1>
@@ -31,13 +33,9 @@
       <a href="menu.html" class="btn-primary">Ver menú</a>
       <a href="historia.html" class="btn-ghost">Nuestra historia</a>
     </div>
-    <div class="hero-number">01</div>
   </div>
-  
-  <!-- Imagen a la derecha -->
   <div class="hero-img">
-    <img src="img/hero-arrozaki.jpg" alt="Arrozaki Healthy Bites" onerror="this.style.display='none'">
-    <div class="hero-img-placeholder">Imagen del producto<br>o restaurante</div>
+    <img src="img/hero-arrozaki.jpg" alt="Arrozaki Healthy Bites">
   </div>
 </section>
 
@@ -47,7 +45,7 @@
     <div class="stat-label">Natural</div>
   </div>
   <div class="stat">
-    <div class="stat-num">+40</div>
+    <div class="stat-num">+3</div>
     <div class="stat-label">Platillos en menú</div>
   </div>
   <div class="stat">
@@ -56,7 +54,7 @@
   </div>
 </div>
 
-<section style="padding: 8rem 4rem;">
+<section class="historia-section">
   <div class="historia">
     <div>
       <p class="section-tag">Historia</p>
@@ -65,8 +63,7 @@
       <p>Desde nuestros inicios en Tizayuca, hemos construido una comunidad alrededor de la mesa — un espacio donde la salud y el sabor no se contraponen, sino que se potencian mutuamente.</p>
     </div>
     <div class="historia-img">
-      <img src="img/historia.jpg" alt="Historia Arrozaki" onerror="this.style.display='none'">
-      <div class="historia-img-placeholder">"La salud es el ingrediente<br>más importante de cualquier<br>receta."</div>
+      <img src="img/historia.jpg" alt="Historia Arrozaki">
     </div>
   </div>
 </section>

@@ -12,6 +12,9 @@
 
 <nav>
   <div class="logo">Arrozaki <span>— Healthy Bites</span></div>
+  <button class="nav-toggle" aria-label="Menú" onclick="this.classList.toggle('open'); document.querySelector('nav ul').classList.toggle('open')">
+    <span></span><span></span><span></span>
+  </button>
   <ul>
     <li><a href="index.html">Inicio</a></li>
     <li><a href="historia.html">Historia</a></li>
@@ -22,81 +25,76 @@
 </nav>
 
 <section class="menu-section">
-  <div class="menu-inner">
-    <div class="menu-header">
-      <p class="section-tag">Menú</p>
-      <h2>Descubre nuestros<br><em>Arrozakis</em></h2>
+  <div class="menu-header">
+    <p class="section-tag">Menú</p>
+    <h2>Descubre nuestros<br><em>Arrozakis</em></h2>
+  </div>
+
+  <div class="menu-grid">
+
+    <!-- ARROZAKI ATÚN -->
+    <div class="arrozaki-card">
+      <div class="arrozaki-img">
+        <img src="img/arrozaki-atun.jpg" alt="Arrozaki Atún">
+      </div>
+      <div class="arrozaki-content">
+        <div class="arrozaki-name">
+          Arrozaki Atún
+          <span class="arrozaki-price">$20 MXN</span>
+        </div>
+        <p class="arrozaki-desc">
+          Pequeñas joyas de arroz, rellenas de proteína y semillas, con un vibrante toque de atún que conquista al primer bocado. Hechas para llevar y disfrutar donde sea.
+        </p>
+        <div class="arrozaki-badges">
+          <span class="arrozaki-tag">⚖️ Regula y mantiene tus niveles de energía</span>
+          <span class="arrozaki-tag">🥢 Fortalecimiento Muscular</span>
+          <span class="arrozaki-tag">⚖️ Regula tus niveles de colesterol</span>
+        </div>
+      </div>
     </div>
-    
-    <div class="menu-grid">
 
-      <!-- AROZAKI ATÚN -->
-      <div class="arrozaki-card">
-        <div class="arrozaki-img">
-          <img src="img/arrozaki-atun.jpg" alt="Arrozaki Atún" onerror="this.style.display='none'">
-          
+    <!-- ARROZAKI POLLO -->
+    <div class="arrozaki-card">
+      <div class="arrozaki-img">
+        <img src="img/arrozaki-pollo.jpg" alt="Arrozaki Pollo">
+      </div>
+      <div class="arrozaki-content">
+        <div class="arrozaki-name">
+          Arrozaki Pollo
+          <span class="arrozaki-price">$33 MXN</span>
         </div>
-        <div class="arrozaki-content">
-          <div class="arrozaki-name">
-            Arrozaki Atún
-            <span class="arrozaki-price">$20 MXN</span>
-          </div>
-          <p class="arrozaki-desc">
-            Pequeñas joyas de arroz, rellenas de proteína y semillas, con un vibrante toque de atún que conquista al primer bocado. Hechas para llevar y disfrutar donde sea.
-          </p>
-          <div class="arrozaki-badges">
-            <span class="arrozaki-tag">⚖️ Regula y mantiene tus niveles de energía</span>
-            <span class="arrozaki-tag">🥢 Fortalecimiento Muscular</span>
-            <span class="arrozaki-tag">⚖️ Regula tus niveles de colesterol</span>
-          </div>
+        <p class="arrozaki-desc">
+          Bocados de arroz rellenos de proteína y semillas, con un irresistible toque de pollo. Ideales para llevar contigo a cualquier lugar.
+        </p>
+        <div class="arrozaki-badges">
+          <span class="arrozaki-tag">🌿 Regula el apetito de forma natural</span>
+          <span class="arrozaki-tag">💪 Proteína de calidad</span>
+          <span class="arrozaki-tag">🔥 Apoya la recuperación de cartílagos</span>
         </div>
       </div>
-
-      <!-- AROZAKI POLLO -->
-      <div class="arrozaki-card">
-        <div class="arrozaki-img">
-          <img src="img/arrozaki-pollo.jpg" alt="Arrozaki Pollo" onerror="this.style.display='none'">
-          <div class="arrozaki-img-placeholder">Imagen Arrozaki Pollo</div>
-        </div>
-        <div class="arrozaki-content">
-          <div class="arrozaki-name">
-            Arrozaki Pollo
-            <span class="arrozaki-price">$33 MXN</span>
-          </div>
-          <p class="arrozaki-desc">
-            Bocados de arroz rellenos de proteína y semillas, con un irresistible toque de pollo. Ideales para llevar contigo a cualquier lugar.
-          </p>
-          <div class="arrozaki-badges">
-            <span class="arrozaki-tag">🌿 Regula el apetito de forma natural</span>
-            <span class="arrozaki-tag">💪 Proteína de calidad</span>
-            <span class="arrozaki-tag">🔥 Apoya la recuperación de cartílagos</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- AROZAKI ZANAHORIA -->
-      <div class="arrozaki-card">
-        <div class="arrozaki-img">
-          <img src="img/arrozaki-zanahoria.jpg" alt="Arrozaki Zanahoria" onerror="this.style.display='none'">
-          <div class="arrozaki-img-placeholder">Imagen Arrozaki Zanahoria</div>
-        </div>
-        <div class="arrozaki-content">
-          <div class="arrozaki-name">
-            Arrozaki Zanahoria
-            <span class="arrozaki-price">$40 MXN</span>
-          </div>
-          <p class="arrozaki-desc">
-            Esferas de arroz rellenas de proteína, semillas, sabor a base de zanahoria. Perfectas para llevar.
-          </p>
-          <div class="arrozaki-badges">
-            <span class="arrozaki-tag">🌿 Rica en Betacarotenos</span>
-            <span class="arrozaki-tag">💪 Alto contenido en Fibra</span>
-            <span class="arrozaki-tag">💚 Favorece la regeneración celular</span>
-          </div>
-        </div>
-      </div>
-
     </div>
+
+    <!-- ARROZAKI ZANAHORIA -->
+    <div class="arrozaki-card">
+      <div class="arrozaki-img">
+        <img src="img/arrozaki-zanahoria.jpg" alt="Arrozaki Zanahoria">
+      </div>
+      <div class="arrozaki-content">
+        <div class="arrozaki-name">
+          Arrozaki Zanahoria
+          <span class="arrozaki-price">$40 MXN</span>
+        </div>
+        <p class="arrozaki-desc">
+          Esferas de arroz rellenas de proteína, semillas, sabor a base de zanahoria. Perfectas para llevar.
+        </p>
+        <div class="arrozaki-badges">
+          <span class="arrozaki-tag">🌿 Rica en Betacarotenos</span>
+          <span class="arrozaki-tag">💪 Alto contenido en Fibra</span>
+          <span class="arrozaki-tag">💚 Favorece la regeneración celular</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 

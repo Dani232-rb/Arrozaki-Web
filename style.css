@@ -20,6 +20,7 @@ body {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
   overflow-x: hidden;
+  font-size: 17px;
 }
 
 a { text-decoration: none; color: inherit; }
@@ -50,7 +51,7 @@ nav {
 
 nav ul { display: flex; gap: 2.5rem; }
 nav ul a {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
@@ -83,7 +84,7 @@ nav ul a:hover, nav ul a.active { color: var(--accent); }
    COMMON COMPONENTS
    =========================== */
 .section-tag {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
@@ -164,7 +165,7 @@ footer {
 }
 
 .hero-tag {
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
@@ -192,7 +193,7 @@ footer {
 .hero h1 em { font-style: italic; color: var(--accent); }
 
 .hero-sub {
-  font-size: 0.92rem;
+  font-size: 1rem;
   color: var(--muted);
   max-width: 36ch;
   line-height: 1.85;
@@ -268,7 +269,7 @@ footer {
 }
 .historia h2 em { font-style: italic; color: var(--accent); }
 .historia p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--muted);
   line-height: 1.9;
   margin-bottom: 1.2rem;
@@ -368,7 +369,7 @@ footer {
   font-family: 'Outfit', sans-serif;
 }
 .arrozaki-desc {
-  font-size: 0.84rem;
+  font-size: 0.94rem;
   color: var(--muted);
   line-height: 1.7;
   margin-bottom: 1rem;
@@ -378,7 +379,7 @@ footer {
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
-  font-size: 0.63rem;
+  font-size: 0.72rem;
   letter-spacing: 0.04em;
   color: var(--text);
   background: rgba(200,169,110,0.08);
@@ -443,7 +444,7 @@ footer {
 }
 .promo-title em { font-style: italic; color: var(--accent); }
 .promo-desc {
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--muted);
   line-height: 1.85;
   max-width: 480px;
@@ -503,7 +504,7 @@ footer {
   min-width: 5.5rem;
   padding-top: 0.1rem;
 }
-.info-value { font-size: 0.88rem; color: var(--text); line-height: 1.6; }
+.info-value { font-size: 0.96rem; color: var(--text); line-height: 1.6; }
 
 .contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
 .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
@@ -588,7 +589,7 @@ textarea.form-input { resize: vertical; min-height: 8rem; }
 }
 .historia-content h1 em { font-style: italic; color: var(--accent); }
 .historia-text {
-  font-size: 0.95rem;
+  font-size: 1.05rem;
   color: var(--muted);
   line-height: 2;
   margin-bottom: 1.8rem;

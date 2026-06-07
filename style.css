@@ -234,6 +234,11 @@ footer {
   padding: 3rem;
   border-right: 0.5px solid var(--border);
   text-align: center;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .stat:last-child { border-right: none; }
 .stat-num {
